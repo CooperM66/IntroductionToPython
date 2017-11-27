@@ -29,7 +29,7 @@ import rosegraphics as rg
 
 ########################################################################
 #
-# TODO: 2.
+# DONE: 2.
 #   Allow this file to use the rosegraphics.py file by marking the src
 #   directory as a "Sources Root".  Do that by right clicking on the src folder,
 #   then selector  Mark Directory As --> Sources Root
@@ -50,12 +50,14 @@ import rosegraphics as rg
 #     TurtleWindow is in the   rg  (shorthand for rosegraphics) module.
 # ----------------------------------------------------------------------
 window = rg.TurtleWindow()
-window.delay(20)  # Bigger numbers mean slower animation.
+window.delay(10)  # Bigger numbers mean slower animation.
 
 # ----------------------------------------------------------------------
 # Makes (constructs) a   SimpleTurtle   object.
 # ----------------------------------------------------------------------
-dave = rg.SimpleTurtle()
+dave = rg.SimpleTurtle("turtle")
+matt = rg.SimpleTurtle()
+
 
 # ----------------------------------------------------------------------
 # Ask the SimpleTurtle objects to do things:
@@ -63,21 +65,24 @@ dave = rg.SimpleTurtle()
 dave.forward(100)
 dave.left(90)
 dave.forward(200)
-
+dave.backward(50)
+dave.right(70)
 # ----------------------------------------------------------------------
 # Construct a new turtle and ask it to do things.
 # ----------------------------------------------------------------------
 matt = rg.SimpleTurtle('turtle')
-matt.pen = rg.Pen('red', 30)
+matt.pen = rg.Pen('blue', 15)
 matt.speed = 10  # Faster
 matt.backward(50)
 matt.left(90)
 matt.forward(50)
+matt.right(90)
+matt.backward(50)
 
 
 ########################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Add a few more line of your own code above to make one of the
 #   existing Turtles move some more and/or have different
 #   characteristics.
@@ -91,7 +96,7 @@ matt.forward(50)
 
 ########################################################################
 #
-# TODO: 4.
+# DONE: 4.
 #   The code above  CONSTRUCTS  two SimpleTurtle objects and gives those objects NAMES:
 #       dave    matt
 #
@@ -109,10 +114,15 @@ matt.forward(50)
 #   As always, test by running the module.
 #
 ########################################################################
-
+cooper = rg.SimpleTurtle('turtle')
+cooper.pen = rg.Pen("purple", 10)
+cooper.speed = 5
+cooper.backward(20)
+cooper.left(17)
+cooper.forward(80)
 ########################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   Run one more time to be sure that all is still OK.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #
