@@ -28,3 +28,25 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+purple_turtle = rg.SimpleTurtle('turtle')
+purple_turtle.pen = rg.Pen("purple", 4)
+purple_turtle.speed = 10
+
+size = 500
+
+for k in range(8):
+    purple_turtle.draw_regular_polygon(8, 90)
+
+purple_turtle.pen_up()
+purple_turtle.right(45)
+purple_turtle.forward(20)
+purple_turtle.left(45)
+
+purple_turtle.pen_down()
+size = size - 15
+
+window.close_on_mouse_click()
