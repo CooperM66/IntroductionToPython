@@ -34,19 +34,30 @@ import rosegraphics as rg
 window = rg.TurtleWindow()
 purple_turtle = rg.SimpleTurtle('turtle')
 purple_turtle.pen = rg.Pen("purple", 4)
-purple_turtle.speed = 10
-
+purple_turtle.speed = 100
+green_turtle = rg.SimpleTurtle('turtle')
+green_turtle.pen = rg.Pen('green', 4)
+green_turtle.speed = 100
 size = 500
 
 for k in range(8):
-    purple_turtle.draw_regular_polygon(8, 90)
+    purple_turtle.draw_regular_polygon(5, 80)
 
-purple_turtle.pen_up()
-purple_turtle.right(45)
-purple_turtle.forward(20)
-purple_turtle.left(45)
+    purple_turtle.pen_up()
+    purple_turtle.right(45)
+    purple_turtle.forward(20)
+    purple_turtle.left(45)
 
-purple_turtle.pen_down()
-size = size - 15
+    purple_turtle.pen_down()
+    size = size - 15
+for k in range(3):
+    green_turtle.draw_regular_polygon(150, 8)
 
+    green_turtle.pen_up()
+    green_turtle.left(45)
+    green_turtle.backward(20)
+    green_turtle.right(45)
+
+    green_turtle.pen_down()
+    size = size - 15
 window.close_on_mouse_click()
